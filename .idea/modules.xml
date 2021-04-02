@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/hmsystem-server/hmsystem.iml" filepath="$PROJECT_DIR$/hmsystem-server/hmsystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hmsystem-generator/hmsystem-generator.iml" filepath="$PROJECT_DIR$/hmsystem-generator/hmsystem-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hmsystembackend.iml" filepath="$PROJECT_DIR$/hmsystembackend.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,3 @@
+# Project exclude paths
+/hmsystem-generator/target/
+/hmsystem-server/target/
