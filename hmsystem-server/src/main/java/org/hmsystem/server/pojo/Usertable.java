@@ -2,6 +2,7 @@ package org.hmsystem.server.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
@@ -26,6 +27,7 @@ import java.util.Collection;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
+@TableName("usertable")
 @ApiModel(value="Usertable对象", description="")
 public class Usertable implements Serializable, UserDetails {
 
@@ -55,12 +57,12 @@ public class Usertable implements Serializable, UserDetails {
 
     @Override
     public String getPassword() {
-        return null;
+        return userpassword;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return username;
     }
 
     @Override

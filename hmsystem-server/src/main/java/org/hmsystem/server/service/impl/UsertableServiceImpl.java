@@ -15,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -22,7 +23,7 @@ import java.util.Map;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author ww1346
@@ -45,24 +46,29 @@ public class UsertableServiceImpl extends ServiceImpl<UsertableMapper, Usertable
 
     @Override
     public Usertable getUserByUserName(String username) {
-        return usertableMapper.selectOne(new QueryWrapper<Usertable>().eq("userid",username));
+        return usertableMapper.selectOne(new QueryWrapper<Usertable>().eq("userid", username));
     }
 
     @Override
-    public RespBean login(String username, String password, HttpServletRequest request){
+    public RespBean login(String username, String password, String code, HttpServletRequest request) {
+        String captcha = (String) request.getSession().getAttribute("captcha");
+        if (StringUtils.isEmpty(code) || !captcha.equalsIgnoreCase(code)) {
+            return RespBean.error("验证码输入错误,请重新输入！");
+        }
+        //登录
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        if (null==userDetails||!passwordEncoder.matches(password,userDetails.getPassword())){
+        if (null == userDetails || !passwordEncoder.matches(password,userDetails.getPassword())) {
             return RespBean.error("用户名或者密码不正确");
         }
         //更新security登录用户对象
-        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
         //生成token
         String token = jwtTokenUtil.generateToken(userDetails);
-        Map<String,String> tokenMap = new HashMap<>();
-        tokenMap.put("token",token);
-        tokenMap.put("tokenHead",tokenHead);
-        return RespBean.success("登陆成功",tokenMap);
+        Map<String, String> tokenMap = new HashMap<>();
+        tokenMap.put("token", token);
+        tokenMap.put("tokenHead", tokenHead);
+        return RespBean.success("登陆成功", tokenMap);
     }
 
 }

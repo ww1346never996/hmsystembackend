@@ -7,6 +7,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -28,24 +29,27 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     private UserDetailsService userDetailsService;
 
     @Override
-    protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        String authHeader = httpServletRequest.getHeader(tokenHeader);
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        String authHeader = request.getHeader(tokenHeader);
         //存在token
-        if (null!=authHeader&&authHeader.startsWith(tokenHead)){
+        if (!StringUtils.isEmpty(authHeader) && authHeader.startsWith(tokenHead)) {
             String authToken = authHeader.substring(tokenHead.length());
-            String username =  jwtTokenUtil.getUserNameFromToken(authToken);
-            //token存在用户名但未登录
-            if (null!=username&& null==SecurityContextHolder.getContext().getAuthentication()){
-                //登陆
-                UserDetails userDetails =  userDetailsService.loadUserByUsername(username);
-                //验证token是否有效，重新设置用户对象
-                if (jwtTokenUtil.validateToken(authToken,userDetails)){
-                    UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
-                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
+            //根据token获取用户名
+            String username = jwtTokenUtil.getUserNameFormToken(authToken);
+            //token中存在用户名但是SpringSecurity不存在(未登录)
+            if (!StringUtils.isEmpty(username) && null == SecurityContextHolder.getContext().getAuthentication()) {
+                //登录
+                UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+                //判断token是否有效
+                if (jwtTokenUtil.validateToken(authToken, userDetails)) {
+                    //把用户对象设置到SpringSecurity全局上下文中
+                    UsernamePasswordAuthenticationToken authenticationToken =
+                            new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+                    authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                 }
             }
         }
-        filterChain.doFilter(httpServletRequest,httpServletResponse);
+        filterChain.doFilter(request, response);
     }
 }

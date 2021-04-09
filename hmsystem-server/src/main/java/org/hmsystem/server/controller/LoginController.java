@@ -26,7 +26,7 @@ public class LoginController {
     @ApiOperation(value = "登陆后返回token")
     @PostMapping("/login")
     public RespBean login(@RequestBody UserLoginParam userLoginParam, HttpServletRequest request){
-        return usertableService.login(userLoginParam.getUsername(),userLoginParam.getPassword(),request);
+        return usertableService.login(userLoginParam.getUsername(),userLoginParam.getPassword(),userLoginParam.getCode(),request);
     }
 
     @ApiOperation(value = "获取当前登录用户信息")

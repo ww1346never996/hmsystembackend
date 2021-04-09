@@ -1,6 +1,7 @@
 package org.hmsystem.server.config.secret;
 
 
+import org.hmsystem.server.config.MyPasswordEncoder;
 import org.hmsystem.server.pojo.Usertable;
 import org.hmsystem.server.service.IUsertableService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.MessageDigestPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -44,7 +46,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 "/doc.html",
                 "/webjars/**",
                 "/swagger-resources/**",
-                "/v2/api-docs/**"
+                "/v2/api-docs/**",
+                "/captcha"
         );
     }
 
@@ -86,7 +89,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        return new MyPasswordEncoder();
     }
 
     @Bean

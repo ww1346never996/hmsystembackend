@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="96ad8a8d-46c7-403c-b91f-c9317c187bd2" name="Default Changelist" comment="" />
+    <list default="true" id="96ad8a8d-46c7-403c-b91f-c9317c187bd2" name="Default Changelist" comment="developing_0.0.1">
+      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/CaptchaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/MyPasswordEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/controller/CaptchaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/testpassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/secret/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/secret/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/secret/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/secret/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/secret/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/secret/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/pojo/UserLoginParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/pojo/UserLoginParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/pojo/Usertable.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/pojo/Usertable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/IUsertableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/IUsertableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/impl/UsertableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/impl/UsertableServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +48,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,6 +60,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1qNtAGMsQJPDVyzkzaJI24AsNnA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,18 +77,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hmsystem-sever/src/main/resources/mapper" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../源码/erp/pom.xml" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ww1346\Desktop\hmsystembackend" />
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.hmsystem.server.service.impl" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.hmsystem.server" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="org.hmsystem.server.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-sever\src\main\resources\mapper" />
@@ -56,6 +94,9 @@
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-sever\src\main\java\org\hmsystem\server\service" />
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-sever\src\main\java\org\hmsystem\server" />
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-sever\src\main\java\org\hmsystem\server\controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ww1346\Desktop\hmsystembackend" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.App">
@@ -67,6 +108,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.hmsystem.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testpassword" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.hmsystem.server.config.secret.testpassword" />
+      <module name="hmsystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.hmsystem.server.config.secret.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,11 +143,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="Application.testpassword" />
       <item itemvalue="Spring Boot.App" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.App" />
+        <item itemvalue="Application.testpassword" />
         <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
@@ -115,11 +171,41 @@
       <workItem from="1617096901538" duration="3997000" />
       <workItem from="1617175851859" duration="10400000" />
       <workItem from="1617264093456" duration="8915000" />
+      <workItem from="1617350050454" duration="905000" />
+      <workItem from="1617694967802" duration="5190000" />
+      <workItem from="1617700189899" duration="10843000" />
+      <workItem from="1617788087303" duration="4725000" />
+      <workItem from="1617868698816" duration="2550000" />
+      <workItem from="1617953095348" duration="506000" />
     </task>
+    <task id="LOCAL-00001" summary="developing_0.0.1">
+      <created>1617350331982</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617350331982</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="developing_0.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="developing_0.0.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="54" key="#Auto_Import" timestamp="1617269191250">
@@ -138,46 +224,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="942" y="446" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1616986913528" />
+    <state x="678" y="365" width="564" height="321" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617794067798">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="678" y="365" width="564" height="321" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1617794067798" />
     <state x="1219" y="403" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1616986920022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1219" y="403" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1616986920022" />
-    <state x="740" y="260" key="FileChooserDialogImpl" timestamp="1617096885698">
+    <state x="740" y="260" key="FileChooserDialogImpl" timestamp="1617700102807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617096885698" />
-    <state width="1869" height="259" key="GridCell.Tab.0.bottom" timestamp="1617275362788">
+    <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617700102807" />
+    <state x="779" y="393" key="Github.ShareDialog" timestamp="1617350137314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617275362788" />
-    <state width="1869" height="259" key="GridCell.Tab.0.center" timestamp="1617275362788">
+    <state x="779" y="393" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617350137314" />
+    <state x="536" y="145" key="Github.UntrackedFilesDialog" timestamp="1617350145175">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617275362788" />
-    <state width="1869" height="259" key="GridCell.Tab.0.left" timestamp="1617275362788">
+    <state x="536" y="145" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617350145175" />
+    <state width="1867" height="254" key="GridCell.Tab.0.bottom" timestamp="1617891199458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617275362788" />
-    <state width="1869" height="259" key="GridCell.Tab.0.right" timestamp="1617275362788">
+    <state width="1867" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617891199458" />
+    <state width="1867" height="254" key="GridCell.Tab.0.center" timestamp="1617891199458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617275362788" />
-    <state width="1869" height="259" key="GridCell.Tab.1.bottom" timestamp="1617275362789">
+    <state width="1867" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617891199458" />
+    <state width="1867" height="254" key="GridCell.Tab.0.left" timestamp="1617891199458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="259" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617275362789" />
-    <state width="1869" height="259" key="GridCell.Tab.1.center" timestamp="1617275362789">
+    <state width="1867" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617891199458" />
+    <state width="1867" height="254" key="GridCell.Tab.0.right" timestamp="1617891199458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="259" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617275362789" />
-    <state width="1869" height="259" key="GridCell.Tab.1.left" timestamp="1617275362788">
+    <state width="1867" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617891199458" />
+    <state width="1867" height="254" key="GridCell.Tab.1.bottom" timestamp="1617891199458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="259" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617275362788" />
-    <state width="1869" height="259" key="GridCell.Tab.1.right" timestamp="1617275362789">
+    <state width="1867" height="254" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617891199458" />
+    <state width="1867" height="254" key="GridCell.Tab.1.center" timestamp="1617891199458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="259" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617275362789" />
+    <state width="1867" height="254" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617891199458" />
+    <state width="1867" height="254" key="GridCell.Tab.1.left" timestamp="1617891199458">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="254" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617891199458" />
+    <state width="1867" height="254" key="GridCell.Tab.1.right" timestamp="1617891199458">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="254" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617891199458" />
     <state x="192" y="176" key="Maven.ArtifactSearchDialog" timestamp="1617264914868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -186,13 +284,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="135" y="157" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1617272821524" />
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1617350356410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617350356410" />
+    <state x="730" y="283" key="chooseDestDirectoryDialog" timestamp="1617794080652">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="730" y="283" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617794080652" />
+    <state x="589" y="35" width="742" height="969" key="find.popup" timestamp="1617695121351">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="589" y="35" width="742" height="969" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617695121351" />
     <state x="669" y="122" key="new project wizard" timestamp="1616989427251">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="122" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1616989427251" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617264816770">
+    <state x="733" y="236" key="refactoring.ChangeSignatureDialog" timestamp="1617697818946">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617264816770" />
+    <state x="733" y="236" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617697818946" />
+    <state x="623" y="225" width="840" height="678" key="search.everywhere.popup" timestamp="1617695520059">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="840" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617695520059" />
   </component>
 </project>

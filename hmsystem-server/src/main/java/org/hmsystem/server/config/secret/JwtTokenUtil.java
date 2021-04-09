@@ -145,4 +145,19 @@ public class JwtTokenUtil {
         return new Date(System.currentTimeMillis() + expiration * 1000);
     }
 
+    /**
+     * 根据token获取用户名
+     *
+     * @return
+     */
+    public String getUserNameFormToken(String token) {
+        String username = null;
+        try {
+            Claims claims = getClaimsFromToken(token);
+            username = claims.getSubject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return username;
+    }
 }
