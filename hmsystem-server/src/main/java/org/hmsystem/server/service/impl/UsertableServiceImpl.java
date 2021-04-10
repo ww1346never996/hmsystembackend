@@ -46,7 +46,7 @@ public class UsertableServiceImpl extends ServiceImpl<UsertableMapper, Usertable
 
     @Override
     public Usertable getUserByUserName(String username) {
-        return usertableMapper.selectOne(new QueryWrapper<Usertable>().eq("userid", username));
+        return usertableMapper.selectOne(new QueryWrapper<Usertable>().eq("username", username));
     }
 
     @Override

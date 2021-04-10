@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author ww1346
@@ -18,6 +18,7 @@ public interface IUsertableService extends IService<Usertable> {
 
     /**
      * 根据用户名获取用户
+     *
      * @param username
      * @return
      */
@@ -26,6 +27,7 @@ public interface IUsertableService extends IService<Usertable> {
 
     /**
      * 登录之后返回token
+     *
      * @param username
      * @param password
      * @param code

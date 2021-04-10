@@ -27,5 +27,7 @@ public class Docinfotable implements Serializable {
 
     private Integer medicinenum;
 
+    private Integer number;
+
 
 }

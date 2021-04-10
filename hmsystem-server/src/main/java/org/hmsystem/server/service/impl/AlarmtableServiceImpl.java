@@ -6,6 +6,8 @@ import org.hmsystem.server.pojo.Alarmtable;
 import org.hmsystem.server.service.IAlarmtableService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -17,4 +19,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class AlarmtableServiceImpl extends ServiceImpl<AlarmtableMapper, Alarmtable> implements IAlarmtableService {
 
+    @Override
+    public List<Alarmtable> getAlarmList() {
+        return list();
+    }
+
+    @Override
+    public boolean deleteAlarmInfo(int medicineNum) {
+        return false;
+    }
+
+    @Override
+    public boolean changeAlarmInfo(Alarmtable alarmtable) {
+        return false;
+    }
+
+    @Override
+    public boolean addAlarmInfo(Alarmtable alarmtable) {
+        return false;
+    }
 }

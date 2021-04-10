@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author ww1346
@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="Documenttable对象", description="")
+@ApiModel(value = "Documenttable对象", description = "")
 public class Documenttable implements Serializable {
 
     private static final long serialVersionUID = 1L;

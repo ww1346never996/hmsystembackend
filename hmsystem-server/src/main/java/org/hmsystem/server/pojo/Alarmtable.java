@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author ww1346
@@ -18,7 +18,7 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="Alarmtable对象", description="")
+@ApiModel(value = "Alarmtable对象", description = "")
 public class Alarmtable implements Serializable {
 
     private static final long serialVersionUID = 1L;

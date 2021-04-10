@@ -4,16 +4,17 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="org.hmsystem.server.pojo.Usertable">
-        <id column="userid" property="userid" />
+        <id column="username" property="username" />
         <result column="userpassword" property="userpassword" />
-        <result column="identity" property="identity" />
+        <result column="useridentity" property="useridentity" />
         <result column="createdate" property="createdate" />
-        <result column="username" property="username" />
+        <result column="name" property="name" />
+        <result column="avatar" property="avatar" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        userid, userpassword, identity, createdate, username
+        username, userpassword, useridentity, createdate, name, avatar
     </sql>
 
 </mapper>

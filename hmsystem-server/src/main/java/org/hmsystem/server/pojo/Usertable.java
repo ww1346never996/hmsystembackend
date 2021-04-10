@@ -34,20 +34,23 @@ public class Usertable implements Serializable, UserDetails {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "id")
-    @TableId(value ="userid",type = IdType.AUTO)
-    private String userid;
+    @TableId(value ="username",type = IdType.AUTO)
+    private String username;
 
     @ApiModelProperty(value = "密码")
     private String userpassword;
 
     @ApiModelProperty(value = "权限组")
-    private Integer identity;
+    private Integer useridentity;
 
     @ApiModelProperty(value = "注册时间")
     private LocalDateTime createdate;
 
     @ApiModelProperty(value = "用户名")
-    private String username;
+    private String name;
+
+    @ApiModelProperty(value = "头像")
+    private String avatar;
 
 
     @Override

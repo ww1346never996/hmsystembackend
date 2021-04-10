@@ -6,11 +6,12 @@
     <resultMap id="BaseResultMap" type="org.hmsystem.server.pojo.Docinfotable">
         <id column="docnum" property="docnum" />
         <result column="medicinenum" property="medicinenum" />
+        <result column="medicinenumber" property="medicinenumber" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        docnum, medicinenum
+        docnum, medicinenum, medicinenumber
     </sql>
 
 </mapper>

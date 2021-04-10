@@ -6,6 +6,8 @@ import org.hmsystem.server.pojo.Medicinetable;
 import org.hmsystem.server.service.IMedicinetableService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -17,4 +19,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class MedicinetableServiceImpl extends ServiceImpl<MedicinetableMapper, Medicinetable> implements IMedicinetableService {
 
+    @Override
+    public List<Medicinetable> getMedicineInfo() {
+        return null;
+    }
+
+    @Override
+    public boolean deleteMedicineInfo(int medicineNum) {
+        return false;
+    }
+
+    @Override
+    public boolean changeMedicineInfo(Medicinetable medicinetable) {
+        return false;
+    }
+
+    @Override
+    public boolean addMedicineInfo(Medicinetable medicinetable) {
+        return false;
+    }
 }
