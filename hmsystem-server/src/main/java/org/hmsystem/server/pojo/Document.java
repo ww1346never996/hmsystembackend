@@ -19,11 +19,11 @@ import java.util.List;
 @ApiModel(value = "Document对象", description = "")
 public class Document {
     @ApiModelProperty(value = "文档编号")
-    private int docNum;
+    private Integer docNum;
     @ApiModelProperty(value = "文档分类")
-    private int docId;
+    private Integer docId;
     @ApiModelProperty(value = "文档状态")
-    private int docState;
+    private Integer docState;
     @ApiModelProperty(value = "文档创建者")
     private String docCreator;
     @ApiModelProperty(value = "文档创建时间")

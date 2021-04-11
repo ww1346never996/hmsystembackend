@@ -32,6 +32,8 @@ public class CaptchaConfig {
         properties.setProperty("kaptcha.image.width", "100");
         //验证码图片高度
         properties.setProperty("kaptcha.image.height", "40");
+        //验证码长度
+        properties.setProperty("kaptcha.textproducer.char.length", "4");
         Config config = new Config(properties);
         defaultKaptcha.setConfig(config);
         return defaultKaptcha;

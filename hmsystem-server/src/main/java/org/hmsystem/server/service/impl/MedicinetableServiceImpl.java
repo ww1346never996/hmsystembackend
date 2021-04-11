@@ -1,5 +1,6 @@
 package org.hmsystem.server.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.hmsystem.server.mapper.MedicinetableMapper;
 import org.hmsystem.server.pojo.Medicinetable;
@@ -21,21 +22,21 @@ public class MedicinetableServiceImpl extends ServiceImpl<MedicinetableMapper, M
 
     @Override
     public List<Medicinetable> getMedicineInfo() {
-        return null;
+        return list();
     }
 
     @Override
     public boolean deleteMedicineInfo(int medicineNum) {
-        return false;
+        return remove(new QueryWrapper<Medicinetable>().eq("medicinenum", medicineNum));
     }
 
     @Override
     public boolean changeMedicineInfo(Medicinetable medicinetable) {
-        return false;
+        return update(medicinetable,new QueryWrapper<Medicinetable>().eq("medicinenum",medicinetable.getMedicinenum()));
     }
 
     @Override
     public boolean addMedicineInfo(Medicinetable medicinetable) {
-        return false;
+        return save(medicinetable);
     }
 }

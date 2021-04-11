@@ -45,9 +45,8 @@ public class ManufacturetableController {
 
     @ApiOperation(value = "删除制造商信息")
     @PostMapping("/deleteManufactureInfo")
-    public RespBean deleteManufactureInfo(@RequestBody Manufacturetable manufacturetable){
-        int manufactureNum =  manufacturetable.getManufacturenum();
-        if (manufacturetable!=null){
+    public RespBean deleteManufactureInfo(@RequestParam("manufacturenum") int manufactureNum){
+        if (manufactureNum!=0){
             if (manufacturetableService.deleteManufacture(manufactureNum)){
                 return RespBean.success("删除成功");
             }else{

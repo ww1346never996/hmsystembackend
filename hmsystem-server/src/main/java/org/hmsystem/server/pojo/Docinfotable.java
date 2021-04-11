@@ -1,6 +1,8 @@
 package org.hmsystem.server.pojo;
 
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -23,11 +25,17 @@ public class Docinfotable implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty(value = "单据详情编号")
+    private Integer docinfonum;
+
+    @ApiModelProperty(value = "单据编号")
     private Integer docnum;
 
+    @ApiModelProperty(value = "药品编号")
     private Integer medicinenum;
 
-    private Integer number;
+    @ApiModelProperty(value = "药品数量")
+    private Integer medicinenumber;
 
 
 }

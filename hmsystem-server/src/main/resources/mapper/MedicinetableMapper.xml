@@ -9,11 +9,12 @@
         <result column="manufacturername" property="manufacturername" />
         <result column="storagedate" property="storagedate" />
         <result column="purchaseprice" property="purchaseprice" />
+        <result column="storagenum" property="storagenum" />
     </resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        medicinenum, medicinename, manufacturername, storagedate, purchaseprice
+        medicinenum, medicinename, manufacturername, storagedate, purchaseprice, storagenum
     </sql>
 
 </mapper>

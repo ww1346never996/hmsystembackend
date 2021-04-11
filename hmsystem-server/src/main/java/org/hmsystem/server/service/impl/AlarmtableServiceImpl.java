@@ -1,5 +1,6 @@
 package org.hmsystem.server.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.hmsystem.server.mapper.AlarmtableMapper;
 import org.hmsystem.server.pojo.Alarmtable;
@@ -26,16 +27,16 @@ public class AlarmtableServiceImpl extends ServiceImpl<AlarmtableMapper, Alarmta
 
     @Override
     public boolean deleteAlarmInfo(int medicineNum) {
-        return false;
+        return remove(new QueryWrapper<Alarmtable>().eq("medicinenum",medicineNum));
     }
 
     @Override
     public boolean changeAlarmInfo(Alarmtable alarmtable) {
-        return false;
+        return update(alarmtable,new QueryWrapper<Alarmtable>().eq("medcinenum",alarmtable.getMedicinenum()));
     }
 
     @Override
     public boolean addAlarmInfo(Alarmtable alarmtable) {
-        return false;
+        return save(alarmtable);
     }
 }
