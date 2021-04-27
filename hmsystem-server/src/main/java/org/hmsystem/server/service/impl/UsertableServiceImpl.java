@@ -2,9 +2,10 @@ package org.hmsystem.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.hmsystem.server.config.secret.JwtTokenUtil;
+import org.hmsystem.server.utils.JwtTokenUtil;
 import org.hmsystem.server.mapper.UsertableMapper;
 import org.hmsystem.server.pojo.RespBean;
+import org.hmsystem.server.pojo.User;
 import org.hmsystem.server.pojo.Usertable;
 import org.hmsystem.server.service.IUsertableService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +58,7 @@ public class UsertableServiceImpl extends ServiceImpl<UsertableMapper, Usertable
         }
         //登录
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
-        if (null == userDetails || !passwordEncoder.matches(password,userDetails.getPassword())) {
+        if (null == userDetails || !passwordEncoder.matches(password, userDetails.getPassword())) {
             return RespBean.error("用户名或者密码不正确");
         }
         //更新security登录用户对象
@@ -69,6 +70,18 @@ public class UsertableServiceImpl extends ServiceImpl<UsertableMapper, Usertable
         tokenMap.put("token", token);
         tokenMap.put("tokenHead", tokenHead);
         return RespBean.success("登陆成功", tokenMap);
+    }
+
+    @Override
+    public boolean register(User user) {
+        Usertable usertable = new Usertable();
+        usertable.setUsername(user.getUsername());
+        usertable.setUseridentity(user.getUseridentity());
+        usertable.setName(user.getName());
+        usertable.setUserpassword(user.getUserpassword());
+        usertable.setCreatedate(user.getCreatedate());
+        usertable.setAvatar(user.getAvatar());
+        return save(usertable);
     }
 
 }

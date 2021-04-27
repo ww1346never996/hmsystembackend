@@ -1,5 +1,6 @@
 package org.hmsystem.server.config.secret;
 
+import org.hmsystem.server.utils.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -35,7 +36,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         if (!StringUtils.isEmpty(authHeader) && authHeader.startsWith(tokenHead)) {
             String authToken = authHeader.substring(tokenHead.length());
             //根据token获取用户名
-            String username = jwtTokenUtil.getUserNameFormToken(authToken);
+            String username = jwtTokenUtil.getUserNameFromToken(authToken);
             //token中存在用户名但是SpringSecurity不存在(未登录)
             if (!StringUtils.isEmpty(username) && null == SecurityContextHolder.getContext().getAuthentication()) {
                 //登录

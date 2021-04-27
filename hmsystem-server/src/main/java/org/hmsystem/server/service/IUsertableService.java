@@ -2,6 +2,7 @@ package org.hmsystem.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.hmsystem.server.pojo.RespBean;
+import org.hmsystem.server.pojo.User;
 import org.hmsystem.server.pojo.Usertable;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,4 +36,10 @@ public interface IUsertableService extends IService<Usertable> {
      * @return
      */
     RespBean login(String username, String password, String code, HttpServletRequest request);
+
+    /**
+     * 注册
+     *
+     */
+    boolean register(User user);
 }

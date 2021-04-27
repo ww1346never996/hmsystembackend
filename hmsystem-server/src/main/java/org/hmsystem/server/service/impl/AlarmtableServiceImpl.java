@@ -32,7 +32,7 @@ public class AlarmtableServiceImpl extends ServiceImpl<AlarmtableMapper, Alarmta
 
     @Override
     public boolean changeAlarmInfo(Alarmtable alarmtable) {
-        return update(alarmtable,new QueryWrapper<Alarmtable>().eq("medcinenum",alarmtable.getMedicinenum()));
+        return update(alarmtable,new QueryWrapper<Alarmtable>().eq("medicinenum",alarmtable.getMedicinenum()));
     }
 
     @Override

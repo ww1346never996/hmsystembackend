@@ -1,14 +1,15 @@
 package org.hmsystem.server.controller;
 
 
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import io.swagger.annotations.ApiOperation;
-import org.hmsystem.server.config.secret.JwtTokenUtil;
+import org.hmsystem.server.utils.JwtTokenUtil;
 import org.hmsystem.server.pojo.*;
 import org.hmsystem.server.service.IAlarmtableService;
 import org.hmsystem.server.service.IDocinfotableService;
 import org.hmsystem.server.service.IDocumenttableService;
 import org.hmsystem.server.service.IMedicinetableService;
-import org.hmsystem.server.service.impl.AlarmtableServiceImpl;
+import org.hmsystem.server.utils.OrderNumUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,6 +39,8 @@ public class AlarmtableController {
     IMedicinetableService medicinetableService;
     @Autowired
     JwtTokenUtil jwtTokenUtil;
+    @Autowired
+    OrderNumUtils orderNumUtils;
 
     @ApiOperation(value = "获取警戒库存列表")
     @GetMapping("/alarmInfo")
@@ -91,9 +94,9 @@ public class AlarmtableController {
         List<AlarmStorage> alarmStorageList = getAllList();
         List<Documenttable> documenttableList = documenttableService.getDocList();
         Documenttable documenttable = new Documenttable();
-        int docNum = documenttableList.size() + 1;
+        int docNum = orderNumUtils.getOrderNum();
         documenttable.setDoccreatedate(LocalDateTime.now());
-        documenttable.setDoccreator(jwtTokenUtil.getUserNameFormToken(token));
+        documenttable.setDoccreator(jwtTokenUtil.getUserNameFromToken(token));
         //1代表订货单
         documenttable.setDocid(1);
         //状态1为待确认

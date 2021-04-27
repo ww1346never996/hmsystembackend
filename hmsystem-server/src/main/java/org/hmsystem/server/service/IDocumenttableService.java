@@ -34,4 +34,9 @@ public interface IDocumenttableService extends IService<Documenttable> {
      * 修改单据信息
      */
     boolean changeDoc(Documenttable documenttable);
+
+    /**
+     * 修改单据状态
+     */
+    boolean changeDocState(int docNum, int docState);
 }

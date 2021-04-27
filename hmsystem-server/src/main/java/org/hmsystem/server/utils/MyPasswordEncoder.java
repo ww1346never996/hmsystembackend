@@ -1,7 +1,6 @@
-package org.hmsystem.server.config;
+package org.hmsystem.server.utils;
 
 
-import org.hmsystem.server.config.MD5Util;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class MyPasswordEncoder implements PasswordEncoder{

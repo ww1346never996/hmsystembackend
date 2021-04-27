@@ -29,6 +29,6 @@ public class Document {
     @ApiModelProperty(value = "文档创建时间")
     private LocalDateTime docCreateTime;
     @ApiModelProperty(value = "药品详情列表")
-    private List<Medicinetable> medicineList;
+    private List<Medicine> medicineList;
 
 }

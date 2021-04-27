@@ -3,9 +3,11 @@ package org.hmsystem.server.controller;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
+import org.hmsystem.server.pojo.Alarmtable;
 import org.hmsystem.server.pojo.Manufacturetable;
 import org.hmsystem.server.pojo.Medicinetable;
 import org.hmsystem.server.pojo.RespBean;
+import org.hmsystem.server.service.IAlarmtableService;
 import org.hmsystem.server.service.IMedicinetableService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +31,8 @@ public class MedicinetableController {
 
     @Autowired
     IMedicinetableService medicinetableService;
+    @Autowired
+    IAlarmtableService alarmtableService;
 
     @ApiOperation(value = "获取药品信息列表")
     @GetMapping("/medicineInfo")
@@ -41,8 +45,11 @@ public class MedicinetableController {
     public RespBean addMedicineInfo(@RequestBody Medicinetable medicinetable){
         if (medicinetable!=null){
             medicinetable.setStoragedate(LocalDateTime.now());
-            medicinetable.setMedicinenum(null);
-            if (medicinetableService.addMedicineInfo(medicinetable)){
+            medicinetable.setMedicinenum(getAllList().size()+1);
+            Alarmtable alarmtable = new Alarmtable();
+            alarmtable.setMedicinenum(medicinetable.getMedicinenum());
+            alarmtable.setAlarmstoragenum(0);
+            if (medicinetableService.addMedicineInfo(medicinetable) && alarmtableService.addAlarmInfo(alarmtable)){
                 return RespBean.success("添加成功");
             }else {
                 return RespBean.error("添加失败");
@@ -56,7 +63,7 @@ public class MedicinetableController {
     @PostMapping("/deleteMedicine")
     public RespBean deleteMedicineInfo(@RequestParam("medicinenum") int medicineNum){
         if (medicineNum!=0){
-            if (medicinetableService.deleteMedicineInfo(medicineNum)){
+            if (medicinetableService.deleteMedicineInfo(medicineNum) && alarmtableService.deleteAlarmInfo(medicineNum)){
                 return RespBean.success("删除成功");
             }else {
                 return RespBean.error("删除失败");

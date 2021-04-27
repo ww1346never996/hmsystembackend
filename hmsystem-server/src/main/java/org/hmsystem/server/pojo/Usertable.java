@@ -34,7 +34,7 @@ public class Usertable implements Serializable, UserDetails {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "id")
-    @TableId(value ="username",type = IdType.AUTO)
+    @TableId(value ="username",type = IdType.INPUT)
     private String username;
 
     @ApiModelProperty(value = "密码")

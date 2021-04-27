@@ -1,4 +1,4 @@
-package org.hmsystem.server.config;
+package org.hmsystem.server.utils;
 
 import java.security.MessageDigest;
 /**

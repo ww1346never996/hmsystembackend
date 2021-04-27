@@ -41,4 +41,14 @@ public class DocumenttableServiceImpl extends ServiceImpl<DocumenttableMapper, D
     public boolean changeDoc(Documenttable documenttable) {
         return update(documenttable, new QueryWrapper<Documenttable>().eq("docnum", documenttable.getDocnum()));
     }
+
+    @Override
+    public boolean changeDocState(int docNum, int docState) {
+        Documenttable documenttable = getOne(new QueryWrapper<Documenttable>().eq("docnum", docNum));
+        if (documenttable!=null){
+            documenttable.setDocstate(docState);
+            return update(documenttable,new QueryWrapper<Documenttable>().eq("docnum", documenttable.getDocnum()));
+        }
+        return false;
+    }
 }

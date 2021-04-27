@@ -1,4 +1,4 @@
-package org.hmsystem.server.config.secret;
+package org.hmsystem.server.utils;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
@@ -39,13 +39,28 @@ public class JwtTokenUtil {
      * @param token
      * @return
      */
-    public String getUserNameFromToken(String token) {
+    public String getUserNameFromClaim(String token) {
         String username;
         try {
             Claims claims = getClaimsFromToken(token);
             username = claims.getSubject();
         } catch (Exception e) {
             username = null;
+        }
+        return username;
+    }
+    /**
+     * 根据token获取用户名
+     *
+     * @return
+     */
+    public String getUserNameFromToken(String token) {
+        String username = null;
+        try {
+            Claims claims = getClaimsFromToken(token);
+            username = claims.getSubject();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return username;
     }
@@ -68,6 +83,7 @@ public class JwtTokenUtil {
         }
         return claims;
     }
+
 
     /**
      * 验证token是否有效
@@ -145,19 +161,4 @@ public class JwtTokenUtil {
         return new Date(System.currentTimeMillis() + expiration * 1000);
     }
 
-    /**
-     * 根据token获取用户名
-     *
-     * @return
-     */
-    public String getUserNameFormToken(String token) {
-        String username = null;
-        try {
-            Claims claims = getClaimsFromToken(token);
-            username = claims.getSubject();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return username;
-    }
 }
