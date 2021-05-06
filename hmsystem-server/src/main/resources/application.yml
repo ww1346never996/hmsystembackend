@@ -9,33 +9,6 @@ server:
       enabled: true
       force: true
 spring:
-  mail:
-    host: smtp.qq.com
-    username: 840950403@qq.com
-    password: fvmsomhjcnxubfid
-    stmp:
-      socketFactoryClass: javax.net.ssl.SSLSocketFactory
-    properties.mail.smtp.port: 465
-    from: 840950403@qq.com
-    properties.mail.smtp.starttls.enable: true
-    properties.mail.smtp.starttls.required: true
-    properties.mail.smtp.ssl.enable: true
-    default-encoding: utf-8
-    # protocol: stmp
-
-  rabbitmq:
-    host: 192.168.10.100
-    port: 5672
-    username: guest
-    password: guest
-    publisher-returns: true
-    listener:
-      simple:
-        acknowledge-mode: manual
-        prefetch: 100
-
-
-
   # 数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -60,8 +33,6 @@ spring:
       # 测试连接是否可用的查询语句
       connection-test-query: SELECT 1
 
-
-      ## QQ邮箱配置
 # Mybatis-plus配置
 mybatis-plus:
   #配置Mapper映射文件

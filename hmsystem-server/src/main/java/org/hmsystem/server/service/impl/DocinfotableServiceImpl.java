@@ -31,8 +31,8 @@ public class DocinfotableServiceImpl extends ServiceImpl<DocinfotableMapper, Doc
     }
 
     @Override
-    public boolean deleteDocInfo(int docInfoNum) {
-        return remove(new QueryWrapper<Docinfotable>().eq("docinfonum", docInfoNum));
+    public boolean deleteDocInfo(int docNum) {
+        return remove(new QueryWrapper<Docinfotable>().eq("docnum", docNum));
     }
 
     @Override

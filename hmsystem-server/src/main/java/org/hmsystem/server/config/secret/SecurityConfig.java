@@ -33,6 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
+        //端口放行
         web.ignoring().antMatchers(
                 "/login",
                 "/logout",

@@ -20,6 +20,7 @@ import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -82,6 +83,16 @@ public class UsertableServiceImpl extends ServiceImpl<UsertableMapper, Usertable
         usertable.setCreatedate(user.getCreatedate());
         usertable.setAvatar(user.getAvatar());
         return save(usertable);
+    }
+
+    @Override
+    public boolean changeInfo(Usertable usertable) {
+        return update(usertable,new QueryWrapper<Usertable>().eq("username",usertable.getUsername()));
+    }
+
+    @Override
+    public List<Usertable> getUserList() {
+        return list();
     }
 
 }

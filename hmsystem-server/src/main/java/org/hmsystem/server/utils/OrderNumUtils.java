@@ -17,6 +17,6 @@ public class OrderNumUtils {
         if (rand < 0) {
             rand = rand * -1;
         }
-        return rand;
+        return (int) seed;
     }
 }

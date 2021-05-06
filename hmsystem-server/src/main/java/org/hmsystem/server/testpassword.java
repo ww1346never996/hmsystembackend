@@ -7,5 +7,4 @@ public class testpassword {
         String encodedpassword = MD5Util.encode("123456");
         System.out.println(encodedpassword);
     }
-
 }

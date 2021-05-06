@@ -6,6 +6,7 @@ import org.hmsystem.server.pojo.User;
 import org.hmsystem.server.pojo.Usertable;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * <p>
@@ -42,4 +43,9 @@ public interface IUsertableService extends IService<Usertable> {
      *
      */
     boolean register(User user);
+
+    boolean changeInfo(Usertable usertable);
+
+    List<Usertable> getUserList();
+
 }

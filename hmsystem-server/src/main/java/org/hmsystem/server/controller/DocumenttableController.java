@@ -124,7 +124,7 @@ public class DocumenttableController {
     @ApiOperation(value = "删除单据")
     @PostMapping("/deleteDocument")
     public RespBean deleteDoc(@RequestParam("docNum") int docNum) {
-        if (documenttableService.deleteDoc(docNum)) {
+        if (documenttableService.deleteDoc(docNum)&&docinfotableService.deleteDocInfo(docNum)) {
             return RespBean.success("删除成功");
         }
         return RespBean.error("删除失败");
@@ -225,8 +225,8 @@ public class DocumenttableController {
         if (docnum != 0) {
             List<Document> documentList = getAllList();
             Document document = new Document();
-            for (int i=0;i<documentList.size();i++){
-                if (documentList.get(i).getDocNum()==docnum){
+            for (int i = 0; i < documentList.size(); i++) {
+                if (documentList.get(i).getDocNum() == docnum) {
                     document = documentList.get(i);
                     break;
                 }
@@ -252,7 +252,7 @@ public class DocumenttableController {
                 }
             }
         }
-        if (flag){
+        if (flag) {
             return RespBean.success("入库操作完成");
         }
         return RespBean.error("未知错误");
@@ -260,8 +260,17 @@ public class DocumenttableController {
 
     @ApiOperation("完成出库单")
     @PostMapping("/outDone")
-    public RespBean outDone(@RequestBody Document document) {
-        if (document != null) {
+    public RespBean outDone(@RequestParam("docnum") int docnum) {
+        boolean flag = false;
+        if (docnum != 0) {
+            List<Document> documentList = getAllList();
+            Document document = new Document();
+            for (int i = 0; i < documentList.size(); i++) {
+                if (documentList.get(i).getDocNum() == docnum) {
+                    document = documentList.get(i);
+                    break;
+                }
+            }
             List<Medicine> medicineList = document.getMedicineList();
             List<Medicinetable> medicinetableList = medicinetableService.getMedicineInfo();
             Documenttable documenttable = new Documenttable();
@@ -270,18 +279,21 @@ public class DocumenttableController {
             documenttable.setDoccreatedate(document.getDocCreateTime());
             documenttable.setDocstate(2);
             documenttable.setDocnum(document.getDocNum());
+            flag = documenttableService.changeDoc(documenttable);
             for (int i = 0; i < medicineList.size(); i++) {
                 Medicine medicine = medicineList.get(i);
                 for (int j = 0; j < medicinetableList.size(); j++) {
                     if (medicine.getMedicineNum().equals(medicinetableList.get(j).getMedicinenum())) {
                         Medicinetable medicinetable = medicinetableList.get(j);
-                        medicinetable.setMedicinenum(medicinetableList.get(j).getStoragenum() - medicine.getStorageNumber());
-                        if (medicinetableService.changeMedicineInfo(medicinetable) && documenttableService.changeDoc(documenttable)) {
-                            return RespBean.success("入库操作完成");
-                        }
+                        medicinetable.setStoragedate(LocalDateTime.now());
+                        medicinetable.setStoragenum(medicinetableList.get(j).getStoragenum() - medicine.getStorageNumber());
+                        flag = medicinetableService.changeMedicineInfo(medicinetable);
                     }
                 }
             }
+        }
+        if (flag) {
+            return RespBean.success("入库操作完成");
         }
         return RespBean.error("未知错误");
     }
@@ -297,5 +309,39 @@ public class DocumenttableController {
             }
         }
         return orders;
+    }
+
+    @ApiOperation("通过配给计划生成出库单")
+    @PostMapping("/generateOut")
+    public RespBean generateOut(@RequestBody httpRation2Out httpRation2Out) {
+        if (httpRation2Out != null) {
+            Ration ration = httpRation2Out.getRation();
+            String user = httpRation2Out.getUser();
+            List<Medicine> medicineList = ration.getMedicineList();
+            int docNum = orderNumUtils.getOrderNum();
+            Documenttable documenttable = new Documenttable();
+            documenttable.setDocnum(docNum);
+            documenttable.setDocstate(1);
+            documenttable.setDoccreatedate(LocalDateTime.now());
+            documenttable.setDoccreator(user);
+            documenttable.setDocid(3);
+            boolean flag = documenttableService.createDoc(documenttable);
+            for (int i = 0; i < medicineList.size(); i++) {
+                Docinfotable docinfotable = new Docinfotable();
+                docinfotable.setDocnum(docNum);
+                docinfotable.setDocinfonum(null);
+                docinfotable.setMedicinenum(medicineList.get(i).getMedicineNum());
+                docinfotable.setMedicinenumber(medicineList.get(i).getStorageNumber());
+                if (flag){
+                    flag = docinfotableService.createDocInfo(docinfotable);
+                }else {
+                    return RespBean.error("生成出库单失败");
+                }
+            }
+            if (flag){
+                return RespBean.success("生成出库单成功");
+            }
+        }
+        return RespBean.error("请求参数不能为空");
     }
 }
