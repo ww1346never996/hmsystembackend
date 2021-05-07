@@ -19,24 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96ad8a8d-46c7-403c-b91f-c9317c187bd2" name="Default Changelist" comment="developing_0.2.1">
-      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/controller/RationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/pojo/Ration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/pojo/httpRation2Out.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/IRationinfotableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/IRationtableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/impl/RationinfotableServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/impl/RationtableServiceImpl.java" afterDir="false" />
+    <list default="true" id="96ad8a8d-46c7-403c-b91f-c9317c187bd2" name="Default Changelist" comment="developed_1.0.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/secret/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/config/secret/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/controller/DocumenttableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/controller/DocumenttableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/controller/UsertableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/controller/UsertableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/IUsertableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/IUsertableService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/impl/DocinfotableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/impl/DocinfotableServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/impl/UsertableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/service/impl/UsertableServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/testpassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/testpassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/utils/OrderNumUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server/utils/OrderNumUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hmsystem-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hmsystem-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,9 +155,9 @@
     <list>
       <item itemvalue="Application.TestList" />
       <item itemvalue="Application.OrderNumUtils" />
+      <item itemvalue="Application.testpassword" />
       <item itemvalue="JUnit.AppTest.testList" />
       <item itemvalue="Spring Boot.App" />
-      <item itemvalue="Application.testpassword" />
     </list>
     <recent_temporary>
       <list>
@@ -236,7 +220,8 @@
       <workItem from="1620113993805" duration="3053000" />
       <workItem from="1620195521718" duration="7299000" />
       <workItem from="1620259738223" duration="6046000" />
-      <workItem from="1620295826629" duration="5129000" />
+      <workItem from="1620295826629" duration="5208000" />
+      <workItem from="1620344826889" duration="1677000" />
     </task>
     <task id="LOCAL-00001" summary="developing_0.0.1">
       <created>1617350331982</created>
@@ -273,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619519436840</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="developed_1.0.0">
+      <created>1620317824069</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1620317824069</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +289,8 @@
     <MESSAGE value="developing_0.1.1" />
     <MESSAGE value="developing_0.1.2" />
     <MESSAGE value="developing_0.2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="developing_0.2.1" />
+    <MESSAGE value="developed_1.0.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="developed_1.0.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="54" key="#Auto_Import" timestamp="1617269191250">
@@ -352,38 +345,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="536" y="145" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617350145175" />
-    <state width="1867" height="241" key="GridCell.Tab.0.bottom" timestamp="1620317790345">
+    <state width="1867" height="332" key="GridCell.Tab.0.bottom" timestamp="1620317872824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="241" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620317790345" />
-    <state width="1867" height="241" key="GridCell.Tab.0.center" timestamp="1620317790345">
+    <state width="1867" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620317872824" />
+    <state width="1867" height="332" key="GridCell.Tab.0.center" timestamp="1620317872824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="241" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620317790345" />
-    <state width="1867" height="241" key="GridCell.Tab.0.left" timestamp="1620317790345">
+    <state width="1867" height="332" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620317872824" />
+    <state width="1867" height="332" key="GridCell.Tab.0.left" timestamp="1620317872824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="241" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620317790345" />
-    <state width="1867" height="241" key="GridCell.Tab.0.right" timestamp="1620317790345">
+    <state width="1867" height="332" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620317872824" />
+    <state width="1867" height="332" key="GridCell.Tab.0.right" timestamp="1620317872824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="241" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620317790345" />
-    <state width="1867" height="332" key="GridCell.Tab.1.bottom" timestamp="1620311619275">
+    <state width="1867" height="332" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620317872824" />
+    <state width="1867" height="332" key="GridCell.Tab.1.bottom" timestamp="1620317872825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="332" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620311619275" />
-    <state width="1867" height="332" key="GridCell.Tab.1.center" timestamp="1620311619274">
+    <state width="1867" height="332" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620317872825" />
+    <state width="1867" height="332" key="GridCell.Tab.1.center" timestamp="1620317872824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="332" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620311619274" />
-    <state width="1867" height="332" key="GridCell.Tab.1.left" timestamp="1620311619274">
+    <state width="1867" height="332" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620317872824" />
+    <state width="1867" height="332" key="GridCell.Tab.1.left" timestamp="1620317872824">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="332" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620311619274" />
-    <state width="1867" height="332" key="GridCell.Tab.1.right" timestamp="1620311619274">
+    <state width="1867" height="332" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620317872824" />
+    <state width="1867" height="332" key="GridCell.Tab.1.right" timestamp="1620317872825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1867" height="332" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620311619274" />
+    <state width="1867" height="332" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620317872825" />
     <state width="1867" height="332" key="GridCell.Tab.2.bottom" timestamp="1619517817414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -408,10 +401,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1619519752810" />
-    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1619520726162">
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1620317831402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1619520726162" />
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620317831402" />
     <state x="730" y="283" key="chooseDestDirectoryDialog" timestamp="1617794080652">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
