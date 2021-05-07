@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96ad8a8d-46c7-403c-b91f-c9317c187bd2" name="Default Changelist" comment="developed_1.0.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +69,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/hmsystem-server/src/main/java/org/hmsystem/server" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hmsystem-server/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
@@ -78,15 +79,16 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.hmsystem.server" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend" />
+      <recent name="C:\Users\ww1346\Desktop\hmsystembackend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-server\src\main\resources\mapper" />
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-sever\src\main\resources\mapper" />
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-sever\src\main\java\org\hmsystem\server\service\impl" />
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-sever\src\main\java\org\hmsystem\server\service" />
       <recent name="C:\Users\ww1346\Desktop\project\hmsystembackend\hmsystem-sever\src\main\java\org\hmsystem\server" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ww1346\Desktop\hmsystembackend" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.App">
@@ -161,8 +163,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testpassword" />
         <item itemvalue="Spring Boot.App" />
+        <item itemvalue="Application.testpassword" />
         <item itemvalue="Application.OrderNumUtils" />
         <item itemvalue="Application.TestList" />
         <item itemvalue="JUnit.AppTest.testList" />
@@ -221,7 +223,8 @@
       <workItem from="1620195521718" duration="7299000" />
       <workItem from="1620259738223" duration="6046000" />
       <workItem from="1620295826629" duration="5208000" />
-      <workItem from="1620344826889" duration="1677000" />
+      <workItem from="1620344826889" duration="1917000" />
+      <workItem from="1620356060378" duration="456000" />
     </task>
     <task id="LOCAL-00001" summary="developing_0.0.1">
       <created>1617350331982</created>
@@ -265,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620317824069</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="developed_1.0.0">
+      <created>1620355740231</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1620355740231</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,10 +343,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1618399566805" />
-    <state x="740" y="260" key="FileChooserDialogImpl" timestamp="1617700102807">
+    <state x="740" y="260" key="FileChooserDialogImpl" timestamp="1620355947715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617700102807" />
+    <state x="740" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620355947715" />
     <state x="779" y="393" key="Github.ShareDialog" timestamp="1617350137314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -401,14 +411,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="344" y="78" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1619519752810" />
-    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1620317831402">
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1620355744917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620317831402" />
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620355744917" />
     <state x="730" y="283" key="chooseDestDirectoryDialog" timestamp="1617794080652">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="730" y="283" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1617794080652" />
+    <state x="717" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620356475548">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="717" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1620356475548" />
     <state x="624" y="245" key="extract.method.dialog" timestamp="1618908232250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
